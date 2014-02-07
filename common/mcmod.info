@@ -1,0 +1,20 @@
+[
+{
+  "modid": "ForgeTutorialsMod",
+  "name": "ForgeTutorialsMod",
+  "description": "ForgeTutorialsMod",
+  "version": "@VERSION@.@PATCH@.@REVISION@",
+  "url": "forgetutorials.com",
+  "updateUrl": "",
+  "authorList": [
+    "JohnyCilohokla"
+  ],
+  "logoFile": "",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+     "ForgeTutorialsAPI"
+  ]
+}
+]
