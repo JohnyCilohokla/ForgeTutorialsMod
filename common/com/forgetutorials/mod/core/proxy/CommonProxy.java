@@ -12,7 +12,7 @@ public class CommonProxy {
 	}
 
 	public void registerTileEntities() {
-		InfernosRegisteryProxyEntity.INSTANCE.addMultiEntity(MobHarvester.TYPE_NAME, MobHarvester.class, InfernosMultiEntityType.BASIC,
-			ForgeTutorialsMod.tabs);
+		InfernosRegisteryProxyEntity.INSTANCE.addMultiEntity(MobHarvester.TYPE_NAME, MobHarvester.class, InfernosMultiEntityType.STATIC_BASIC,
+				ForgeTutorialsMod.tabs);
 	}
 }

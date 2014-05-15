@@ -17,11 +17,9 @@ import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
 import cpw.mods.fml.common.network.IGuiHandler;
-import cpw.mods.fml.common.network.NetworkMod;
 import cpw.mods.fml.common.network.NetworkRegistry;
 
 @Mod(modid = ModInfo.MOD_ID, name = ModInfo.MOD_NAME, version = ModInfo.VERSION, dependencies = "required-after:ForgeTutorialsAPI")
-@NetworkMod(serverSideRequired = false, clientSideRequired = true)
 public class ForgeTutorialsMod implements IGuiHandler {
 
 	@SidedProxy(clientSide = ModInfo.CLIENT_PROXY_CLASS, serverSide = ModInfo.SERVER_PROXY_CLASS)
@@ -31,7 +29,6 @@ public class ForgeTutorialsMod implements IGuiHandler {
 
 	public static final int metaDimID = 8;
 	public static int metaBiomeID = 108;
-
 
 	public static ForgeRegistryUtilities registry = new ForgeRegistryUtilities("metatechcraft", ModInfo.MOD_ID);
 
@@ -46,7 +43,7 @@ public class ForgeTutorialsMod implements IGuiHandler {
 	public void preInit(FMLPreInitializationEvent event) {
 		System.out.println(">> ForgeTutorialsMod: preInit");
 
-		NetworkRegistry.instance().registerGuiHandler(this, ForgeTutorialsMod.instance);
+		NetworkRegistry.INSTANCE.registerGuiHandler(this, ForgeTutorialsMod.instance);
 	}
 
 	@EventHandler
